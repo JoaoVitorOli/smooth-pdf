@@ -1,3 +1,5 @@
+import { ButtonsNextPrev } from './components/ButtonsNextPrev';
+import { PagesCount } from './components/PagesCount';
 import PdfViewer from './components/PdfViewer';
 import { Titlebar } from './components/Titlebar';
 
@@ -7,6 +9,9 @@ function App() {
       <Titlebar />
 
       <PdfViewer />
+
+      <PagesCount />
+      <ButtonsNextPrev />
     </main>
   );
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import * as PdfJs from 'pdfjs-dist';
 import { useLayoutEffect, useRef, useState } from 'react';
 import pdfFile from '../assets/Test_PDF.pdf';
@@ -5,7 +7,7 @@ import pdfFile from '../assets/Test_PDF.pdf';
 export default function PdfViewer() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const divTextLayerRef = useRef<HTMLDivElement>(null);
-  const [scale] = useState(1.8);
+  const [scale] = useState(1);
 
   useLayoutEffect(() => {
     loadPdf();
@@ -57,7 +59,8 @@ export default function PdfViewer() {
   }
 
   return (
-    <div className='overflow-y-scroll h-full py-4'>
+
+    <div className='custom-scroll overflow-y-scroll h-full overflow-x-hidden pt-4 pb-12'>
       <div
         id='viewer'
         className='pdfViewer flex w-full items-center justify-center'

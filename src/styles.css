@@ -13,7 +13,6 @@ div {
 body {
   background: transparent !important;
   overflow-y: hidden;
-  border-radius: 50px;
 }
 
 .custom-scroll::-webkit-scrollbar {
@@ -32,4 +31,8 @@ body {
 
 .custom-scroll::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.layer {
+  border-radius: 0.75rem
 }

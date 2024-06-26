@@ -12,4 +12,24 @@ div {
 
 body {
   background: transparent !important;
+  overflow-y: hidden;
+  border-radius: 50px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 50px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #494949;
+  border-radius: 50px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

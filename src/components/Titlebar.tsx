@@ -25,26 +25,26 @@ export function Titlebar() {
   return (
     <div
       data-tauri-drag-region
-      className="relative w-full h-fit bg-[#111] rounded-t-md"
+      className="fixed top-0 z-50 w-full h-fit bg-[#111] rounded-t-xl"
     >
       <div className="w-fit h-fit ml-auto">
         <button
           onClick={handleMinimize}
           aria-label="Minimize"
-          className='p-1 transition-all duration-200 hover:bg-[#eaeaea]/10'
+          className='p-2 transition-all duration-200 hover:bg-[#eaeaea]/10'
         >
           <Minimize2 color='#999' size={20} />
         </button>
         <button
           onClick={() => appWindow.toggleMaximize()}
-          className='p-1 transition-all duration-200 hover:bg-[#eaeaea]/10'
+          className='p-2 transition-all duration-200 hover:bg-[#eaeaea]/10'
         >
           {isMaximized ? <Minimize color='#999' size={20} /> : <Maximize color='#999' size={20} />}
         </button>
         <button
           onClick={handleClose}
           aria-label="Close"
-          className='p-1 group transition-all duration-200 hover:bg-[#ff1a1a] rounded-tr-lg'
+          className='p-2 group transition-all duration-200 hover:bg-[#ff1a1a] rounded-tr-lg'
         >
           <X className='stroke-[#999] transition-all duration-200 group-hover:stroke-white' size={20} />
         </button>

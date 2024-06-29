@@ -2,6 +2,7 @@ import { appWindow } from '@tauri-apps/api/window';
 import { Minimize2, Minimize, Maximize, X } from '@geist-ui/icons';
 import { useEffect, useState } from 'react';
 import { ConfigButton } from './ConfigButton';
+import { ZoomInOut } from './ZoomInOut';
 
 export function Titlebar() {
   const [isMaximized, setIsMaximized] = useState(false);
@@ -29,6 +30,8 @@ export function Titlebar() {
       className="fixed flex top-0 z-50 w-full h-fit bg-[#111] rounded-t-xl"
     >
       <ConfigButton />
+
+      <ZoomInOut />
 
       <div className="w-fit h-fit ml-auto">
         <button

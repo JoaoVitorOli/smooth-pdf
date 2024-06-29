@@ -8,7 +8,6 @@ export function ConfigButton() {
 
   const closeHandler = () => {
     setModalState(false);
-    console.log('closed');
   };
 
   return (
@@ -21,6 +20,9 @@ export function ConfigButton() {
       </button>
 
       <Modal visible={modalState} onClose={closeHandler}>
+        <Modal.Title>
+          Configuration
+        </Modal.Title>
         <Modal.Content>
           <Checkbox
             checked={true}

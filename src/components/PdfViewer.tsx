@@ -32,10 +32,10 @@ export default function PdfViewer() {
     canvas.style.width = `${viewport.width}px`;
     canvas.style.height = `${viewport.height}px`;
 
-    const transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
+    const transform = [outputScale, 0, 0, outputScale, 0, 0];
 
     const renderContext = {
-      canvasContext: context,
+      canvasContext: context!,
       viewport,
       transform,
     };
